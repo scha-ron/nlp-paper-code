@@ -1,6 +1,6 @@
-# RAG-based Educational Guidance Assistant 🎓🇩🇪
+# RAG-based Educational Guidance Assistant
 
-A Retrieval-Augmented Generation (RAG) chatbot supporting Ugandan students seeking computer science studies in Germany. Developed as part of a term paper research project at Furtwangen University of Applied Sciences.
+A simple Retrieval-Augmented Generation (RAG) chatbot supporting Ugandan students seeking computer science studies in Germany. Developed as part of a term paper research project at Furtwangen University of Applied Sciences.
 
 ## 🎯 Purpose
 
@@ -69,7 +69,7 @@ Addresses the information gap Ugandan students face when navigating German highe
 
 ## 📄 License
 
-Apache License 2.0
+MIT License
 
 ## 🙏 Acknowledgments
 
@@ -78,11 +78,4 @@ Apache License 2.0
 - **Open Source**: LangChain, HuggingFace, Ollama teams
 - **Development Support**: ChatGPT and Claude
 
-## 📞 Contact
 
-**Author**: Sharon Kwikiriza  
-**Term Paper**: Summer Semester 2025  
-**Repository**: https://github.com/scha-ron/nlp-paper-code
-
-
-Much cleaner! This version keeps all the essential information while being concise and to the point.
