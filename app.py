@@ -6,8 +6,8 @@ from langchain.chains import RetrievalQA
 from langchain_ollama import ChatOllama
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-# Path to your PDF
-PDF_PATH = r"C:\Users\rizaa\OneDrive\Desktop\IBS\SEM6\NLP\nlp_bot_2\data\qa_corpus.pdf"
+# Path to Corpus PDF
+# PDF_PATH = 
 CHROMA_PATH = "chroma_store"
 
 # Load documents
@@ -71,3 +71,4 @@ if __name__ == "__main__":
         response = qa.invoke(user_input)
         answer = response.get("result", "") or response.get("text", "") or ""
         print(f"Answer:\n{answer.strip()}\n{'-'*60}")
+
