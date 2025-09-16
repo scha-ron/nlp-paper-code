@@ -1,30 +1,70 @@
-# RAG-based Educational Guidance Assistant
+RAG-based Educational Guidance Assistant 
+A Retrieval-Augmented Generation (RAG) chatbot supporting Ugandan students seeking computer science studies in Germany. Developed as part of a term paper research project at Furtwangen University of Applied Sciences.
+🎯 Purpose
+Addresses the information gap Ugandan students face when navigating German higher education requirements for computer science programs. Provides personalized guidance on admissions, language requirements, and application procedures.
+✨ Features
 
-A simple Retrieval-Augmented Generation (RAG) chatbot designed to demonstrate how an AI assistant can provide personalized guidance for Ugandan nationals pursuing computer science studies in German higher education institutions.
+RAG Architecture: Contextual responses using retrieval-augmented generation
+Local LLM: Runs offline using Ollama with Qwen3-1.7B model
+Curated Knowledge Base: Built from official DAAD and university sources
+Interactive CLI: Simple command-line interface
+Evaluation Framework: Built-in testing with performance metrics
 
-## Purpose
+🛠 Tech Stack
 
-The primary goal is to address the information gap that Ugandan students face when navigating the complex German higher education system. This assistant aims to provide:
+LangChain: RAG pipeline framework
+Chroma: Vector database for document storage
+HuggingFace Embeddings: all-MiniLM-L6-v2 for semantic search
+Ollama: Local LLM runtime
+PyPDF: Document processing
 
-- Personalized, step-by-step guidance for CS program applications
-- Clear information about admission requirements and procedures  
-- Language proficiency requirements and examination options
-- Document preparation and qualification recognition processes
+🚀 Quick Start
 
-## System Features
+Prerequisites
 
-- **RAG Architecture**: Combines retrieval and generation for contextually relevant responses
-- **Curated Knowledge Base**: Built from selected official German university sources and DAAD information
-- **Local LLM Integration**: Uses Qwen3-1.7B model via Ollama for offline processing
-- **Semantic Search**: Employs all-MiniLM-L6-v2 embeddings for document retrieval
-- **Evaluation Framework**: Includes simple testing methodology for system assessment
+bash   # Install Ollama and pull model
+   ollama pull qwen3:1.7b
 
-## Technical Implementation
+Setup
 
-### Core Technologies
-- **LangChain**: Framework for building the RAG pipeline
-- **Chroma**: Vector database for document storage and retrieval
-- **HuggingFace Embeddings**: `all-MiniLM-L6-v2` model for semantic text representation
-- **Ollama**: Local LLM runtime with `qwen3:1.7b` model
-- **PyPDF**: PDF document processing for knowledge base creation
+bash   git clone https://github.com/scha-ron/nlp-paper-code.git
+   cd nlp-paper-code
+   pip install -r requirements.txt
 
+Run
+
+bash   python app.py  # Interactive chatbot
+   python evaluate.py  # Run evaluation tests
+📁 Structure
+├── app.py              # Main chatbot interface
+├── rag_system.py       # Core RAG implementation
+├── evaluate.py         # Testing framework
+├── requirements.txt    # Dependencies
+└── data/qa_corpus.pdf  # Knowledge base
+🔬 Research Results
+
+Reliability: 100% response rate
+Response Time: 33.56s average
+Performance: Above-average clarity, moderate accuracy
+Limitation: Small dataset (4 QA pairs) affects comprehensiveness
+
+🔧 Configuration
+
+Chunk Size: 500 characters
+Model: Qwen3-1.7B via Ollama
+Embeddings: all-MiniLM-L6-v2
+Knowledge Base: PDF in data/ directory
+
+📄 License
+MIT License 
+🙏 Acknowledgments
+
+Supervisor: Prof. Dr. Simon Albrecht
+Institution: Furtwangen University of Applied Sciences
+Open Source: LangChain, HuggingFace, Ollama teams
+Development Support: ChatGPT and Claude
+
+📞 Contact
+Author: Sharon Kwikiriza
+Term Paper: Summer Semester 2025
+Repository: https://github.com/scha-ron/nlp-paper-code
