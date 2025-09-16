@@ -7,8 +7,10 @@ from langchain_ollama import ChatOllama
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 # Path to Corpus PDF
-# PDF_PATH = 
-CHROMA_PATH = "chroma_store"
+# PDF_PATH = ""
+
+# Path to your chroma database
+# CHROMA_PATH = ""
 
 # Load documents
 loader = PyPDFLoader(PDF_PATH)
@@ -71,4 +73,5 @@ if __name__ == "__main__":
         response = qa.invoke(user_input)
         answer = response.get("result", "") or response.get("text", "") or ""
         print(f"Answer:\n{answer.strip()}\n{'-'*60}")
+
 
